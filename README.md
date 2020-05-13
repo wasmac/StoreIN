@@ -23,13 +23,13 @@ which mostly contains data about what app currently displays.
 ## Working principle
 StoreIN asks the user to provide the necessary permissions which allows the app to modify or create albums in users Google Photos service. (App can only modify files which was added created by the app itself.)
 
-<div align=”center”> 
-![Permission check](https://github.com/wasmac/StoreIN/blob/master/images/1.PNG) 
-</div>
+<p align="center">
+ <img width="300" height="460" src="https://github.com/wasmac/StoreIN/blob/master/images/1.PNG">
+</p>
 
 Application then goes to its default state, homescreen which is basicly an camera display.
 <p align="center">
- <img width="460" height="300" src="https://github.com/wasmac/StoreIN/blob/master/images/2.PNG">
+ <img width="300" height="460" src="https://github.com/wasmac/StoreIN/blob/master/images/2.PNG">
 </p>
 User then have various options like:
 
@@ -42,9 +42,9 @@ User then have various options like:
 1) Make a photo,
 2) Select name and dates of when item was bought and when receipt will expire,
 3) Select shop name- from previously added ones or enter new shop name.
-<div align=”center”>
-![Save screen](https://github.com/wasmac/StoreIN/blob/master/images/3.PNG)
-</div>
+<p align="center">
+ <img width="300" height="460" src="https://github.com/wasmac/StoreIN/blob/master/images/3.PNG">
+</p>
 After these easy steps the photo of receipt will be added to users cloud and stored within.
 
 ## Future development plans
