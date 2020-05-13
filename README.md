@@ -23,11 +23,13 @@ which mostly contains data about what app currently displays.
 ## Working principle
 StoreIN asks the user to provide the necessary permissions which allows the app to modify or create albums in users Google Photos service. (App can only modify files which was added created by the app itself.)
 
-<div align=”center”> ![Permission check](https://github.com/wasmac/StoreIN/blob/master/images/1.PNG) </div>
-
+<div align=”center”> 
+![Permission check](https://github.com/wasmac/StoreIN/blob/master/images/1.PNG) 
+</div>
+![Camera display](https://github.com/wasmac/StoreIN/blob/master/images/2.PNG)
 Application then goes to its default state, homescreen which is basicly an camera display.
 <div align=”center”>
-![Camera display](https://github.com/wasmac/StoreIN/blob/master/images/2.PNG)
+ <img width="460" height="300" src="https://github.com/wasmac/StoreIN/blob/master/images/2.PNG">
 </div>
 User then have various options like:
 
