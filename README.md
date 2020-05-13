@@ -7,7 +7,7 @@ and directories like **imagestoupload**, **tmp**...) and directory named **kivy*
 which mostly contains data about what app currently displays.
 
 ## Requirements
-### Python =>3.7 with libraries:
+### Python >=3.7 with libraries:
  - Kivy
  - KivyMD
  - google-api-python-client
