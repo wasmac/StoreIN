@@ -2,9 +2,9 @@
 Python application that uses Kivy, KivyMD and GooglePhotos Api to help in receipt management.
 
 ## Files
-Project files are divided into separate directories, one main (which contains all .py alongside with main.kv file 
-and directories like **imagestoupload**, **tmp**...) and directory named **kivy** containing .kv files, 
-which mostly contains data about what app currently displays.
+Project files are divided into separate directories, one main (which contains all .py files alongside with main.kv file 
+and directories like **imagestoupload**, **tmp**...) and directory named **kivy** that stores .kv files, 
+which sotres files related to user interface.
 
 ## Requirements
 ### Python >=3.7 with libraries:
@@ -21,13 +21,13 @@ which mostly contains data about what app currently displays.
  - ast
  
 ## Working principle
-StoreIN asks the user to provide the necessary permissions which allows the app to modify or create albums in users Google Photos service. (App can only modify files which was added created by the app itself.)
+StoreIN asks user to provide the necessary permissions which allows the app to modify or create albums in users Google Photos service. (App can only modify files which was added/created by the app itself.)
 
 <p align="center">
  <img width="300" height="460" src="https://github.com/wasmac/StoreIN/blob/master/images/1.PNG">
 </p>
 
-Application then goes to its default state, homescreen which is basicly an camera display.
+Application then goes to its default state, **homescreen** which is basicly an camera display.
 <p align="center">
  <img width="300" height="460" src="https://github.com/wasmac/StoreIN/blob/master/images/2.PNG">
 </p>
