@@ -1,0 +1,27 @@
+<PictureScreen>
+    on_enter: app.reload_picture()
+    FloatLayout:
+        id: picture
+        picture_source: 'dummy.png'
+        canvas.before:
+            Rectangle:
+                source: self.picture_source
+                pos: self.pos
+                size: self.size
+        MDIconButton:
+            icon: "close-circle"
+            opposite_colors: True
+            pos_hint: {"center_x": .2, "center_y": .05}
+            user_font_size: "36sp"
+            on_press: 
+                app.remove_picture()
+                root.manager.transition.direction = 'left'
+                root.manager.current = 'home_screen'
+        MDIconButton:
+            icon: "check-circle"
+            opposite_colors: True
+            pos_hint: {"center_x": .8, "center_y": .05}
+            user_font_size: "36sp"
+            on_press: 
+                root.manager.transition.direction = 'left'
+                root.manager.current = 'save_screen'

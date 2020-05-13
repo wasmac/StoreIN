@@ -1,0 +1,60 @@
+<ShopNameScreen>
+    on_enter: app.drop_down_menu_init()
+    FloatLayout:
+        GridLayout:
+            rows: 1
+            pos_hint: {"top": 1, "left": 1}
+            size_hint: 1, .1
+            canvas:
+                Color:
+                    rgb: utils.get_color_from_hex("#2f2f39")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+            MDLabel:
+                text: "  StoreIN"
+                halign: "left"
+                font_style: "H6"
+                color: utils.get_color_from_hex("#ffffff")
+    FloatLayout:
+        MDTextField:
+            id: field
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            size_hint_x: None
+            width: "200dp"
+            hint_text: "Shop name"
+            on_focus: if self.focus: app.menu.open()
+        FloatLayout:
+            GridLayout:
+                cols: 1
+                pos_hint: {"top": 0.1, "left": 1}
+                size_hint: 1, .1
+                canvas:
+                    Color:
+                        rgb: utils.get_color_from_hex("#2f2f39")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+        MDIconButton:
+            icon: "arrow-left-bold-circle"
+            opposite_colors: True
+            pos_hint: {"center_x": .2, "center_y": .05}
+            user_font_size: "36sp"
+            on_press: 
+                root.manager.transition.direction = 'left'
+                root.manager.current = 'save_screen'
+                gif.source = "white.png"
+                gif_delay = -1
+        MDIconButton:
+            icon: "check-circle"
+            opposite_colors: True
+            pos_hint: {"center_x": .8, "center_y": .05}
+            user_font_size: "36sp"
+            on_press: 
+                app.upload_complete()
+                app.print_date_and_name()
+                app.upload_to_cloud()
+                app.remove_pic_after_upload()
+                root.manager.transition.direction = 'right'
+                root.manager.current = 'home_screen'
+                

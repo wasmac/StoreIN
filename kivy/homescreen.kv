@@ -1,0 +1,72 @@
+<HomeScreen>
+    on_pre_enter: 
+        app.camera_setup() 
+    FloatLayout:
+        GridLayout:
+            rows: 1
+            pos_hint: {"top": 1, "left": 1}
+            size_hint: 1, .1
+            canvas:
+                Color:
+                    rgb: utils.get_color_from_hex("#2f2f39")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+            MDLabel:
+                text: "  StoreIN"
+                halign: "left"
+                font_style: "H6"
+                color: utils.get_color_from_hex("#ffffff")
+            MDIconButton:
+                icon: "information-outline"
+                opposite_colors: True
+                user_font_size: "36sp"
+                on_press: 
+                    camera.play = not camera.play
+                    root.manager.transition.direction = 'down'
+                    root.manager.current = 'info_screen'
+            MDIconButton:
+                icon: "paper-roll"
+                opposite_colors: True
+                user_font_size: "36sp"
+                on_press: 
+                    camera.play = not camera.play
+                    root.manager.transition.direction = 'left'
+                    root.manager.current = 'album_screen'
+    Camera:
+        id: camera
+        index : 0 # remember to change it to 0 !
+        resolution: (640, 480)
+        play: False
+        
+    
+
+    FloatLayout:
+        GridLayout:
+            cols: 1
+            pos_hint: {"top": 0.1, "left": 1}
+            size_hint: 1, .1
+            canvas:
+                Color:
+                    rgb: utils.get_color_from_hex("#2f2f39")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+    MDIconButton:
+        icon: "circle-slice-8"
+        opposite_colors: True
+        pos_hint: {"center_x": .5, "center_y": .05}
+        user_font_size: "36sp"
+        on_press: 
+            camera.play = not camera.play
+            app.capture()
+            app.debug_print()
+            root.manager.transition.direction = 'left'
+            root.manager.transition.duration = 0.01
+            root.manager.current = 'picture_screen'
+
+        
+        
+        
+#root.hide_widget()
+#if app.init_screen() else root.manager.current = 'first_log_screen'

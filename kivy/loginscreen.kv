@@ -1,0 +1,33 @@
+<LoginScreen>
+    FloatLayout:
+        GridLayout:
+            cols: 1
+            pos_hint: {"center_x": .325, "center_y": .7}
+            size_hint: .3, .4
+            MDTextField:
+                id: login_email
+                hint_text: "e-mail adress"
+                helper_text_mode: "on_focus"
+        GridLayout:
+            cols: 1
+            pos_hint: {"center_x": .325, "center_y": .6}
+            size_hint: .3, .4
+            MDTextField:
+                id: login_password
+                hint_text: "password"
+                helper_text_mode: "on_focus"
+                password: True
+        GridLayout:
+            cols: 2
+            rows: 1
+            pos_hint: {"center_x": .275, "center_y": .45}
+            size_hint: .3, .2
+            MDFlatButton:
+                text: "Cancel"
+                text_color: 0, 0, 1, 1
+                on_release:
+                    root.manager.current = 'first_log_screen'
+                    root.manager.transition.direction = 'right'
+            MDFlatButton:
+                text: "Sing In"
+                text_color: 0, 0, 1, 1            

@@ -1,0 +1,35 @@
+<FirstLogScreen>:
+    on_enter: app.init_screen()
+    FloatLayout:        
+        GridLayout:
+            rows: 1
+            pos_hint: {"center_x": .325, "center_y": .7}
+            size_hint: .3, .2
+            MDRectangleFlatIconButton:
+                icon: "dropbox"
+                text: "DropBox"
+                width: dp(140)
+                on_release:
+                    root.manager.transition.direction = 'left'
+                    root.manager.current = 'home_screen'
+
+        GridLayout:
+            rows: 1
+            pos_hint: {"center_x": .325, "center_y": .5}
+            size_hint: .3, .2
+            MDRectangleFlatIconButton:
+                icon: "apple-icloud"
+                text: "iCloud"
+                width: dp(140)
+        GridLayout:
+            rows: 1
+            pos_hint: {"center_x": .325, "center_y": .3}
+            size_hint: .3, .2
+            MDRectangleFlatIconButton:
+                icon: "google-cloud"
+                text: "Google Cloud"
+                width: dp(140)
+                on_release:
+                    root.manager.transition.direction = 'left'
+                    root.manager.current = 'home_screen'
+

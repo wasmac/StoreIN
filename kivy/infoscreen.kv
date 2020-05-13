@@ -1,0 +1,57 @@
+<InfoScreen>
+    FloatLayout:
+        GridLayout:
+            rows: 1
+            pos_hint: {"top": 1, "left": 1}
+            size_hint: 1, .1
+            canvas:
+                Color:
+                    rgb: utils.get_color_from_hex("#2f2f39")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+            MDLabel:
+                text: "  Info"
+                color: utils.get_color_from_hex("#ffffff")
+                halign: "left"
+                font_style: "H6"
+            MDIconButton:
+                icon: "close-circle"
+                opposite_colors: True
+                user_font_size: "36sp"
+                on_press: 
+                    app.camera_setup()
+                    root.manager.transition.direction = 'up'
+                    root.manager.transition.duration = 0.4
+                    root.manager.current = 'home_screen'
+            MDIconButton:
+                icon: "paper-roll"
+                opposite_colors: True
+                user_font_size: "36sp"
+                on_press: 
+                    root.manager.transition.direction = 'left'
+                    root.manager.current = 'album_screen'
+        ScrollView:
+            pos_hint: {"top": .9, "left": 1}
+            size_hint: 1, .8
+            GridLayout:
+                id: info_grid
+                cols: 1
+                spacing: 5,5
+                size_hint_y: None
+                height: self.minimum_height
+                row_default_height: '300dp'
+                row_force_default: True
+        FloatLayout:
+            GridLayout:
+                cols: 1
+                pos_hint: {"top": 0.1, "left": 1}
+                size_hint: 1, .1
+                canvas:
+                    Color:
+                        rgb: utils.get_color_from_hex("#2f2f39")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+
+           

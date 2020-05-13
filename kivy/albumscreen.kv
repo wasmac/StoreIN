@@ -1,0 +1,59 @@
+<AlbumScreen>
+    on_enter: app.populate_album_screen()
+    FloatLayout:
+        GridLayout:
+            rows: 1
+            pos_hint: {"top": 1, "left": 1}
+            size_hint: 1, .1
+            canvas:
+                Color:
+                    rgb: utils.get_color_from_hex("#2f2f39")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+            MDLabel:
+                text: "  Receipts"
+                color: utils.get_color_from_hex("#ffffff")
+                halign: "left"
+                font_style: "H6"
+            MDIconButton:
+                icon: "information-outline"
+                opposite_colors: True
+                user_font_size: "36sp"
+                on_press: 
+                    root.manager.transition.direction = 'down'
+                    root.manager.current = 'info_screen'
+            MDIconButton:
+                icon: "close-circle"
+                opposite_colors: True
+                user_font_size: "36sp"
+                on_press: 
+                    app.camera_setup()
+                    root.manager.transition.direction = 'right'
+                    root.manager.transition.duration = 0.4
+                    root.manager.current = 'home_screen'
+        ScrollView:
+            pos_hint: {"top": .9, "left": 1}
+            size_hint: 1, .8
+            GridLayout:
+                cols: 3
+                id: album_grid
+                size_hint_y: None
+                height: self.minimum_height
+                row_default_height: '200dp'
+                row_force_default: True
+                spacing: 20, 20
+                padding: 20, 20
+        FloatLayout:
+            GridLayout:
+                cols: 1
+                pos_hint: {"top": 0.1, "left": 1}
+                size_hint: 1, .1
+                canvas:
+                    Color:
+                        rgb: utils.get_color_from_hex("#2f2f39")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                        
+

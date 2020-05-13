@@ -1,0 +1,39 @@
+#:include kivy/firstlogscreen.kv
+#:include kivy/homescreen.kv
+#:include kivy/loginscreen.kv
+#:include kivy/picturescreen.kv
+#:include kivy/savescreen.kv
+#:include kivy/shopnamescreen.kv
+#:include kivy/albumscreen.kv
+#:include kivy/infoscreen.kv
+#:import utils kivy.utils
+#:import BoxLayout kivy.uix.boxlayout
+
+BoxLayout:
+    orientation:'vertical'
+    ScreenManager:
+        id: screen_manager      
+        HomeScreen:
+            name: "home_screen"
+            id: home_screen
+        FirstLogScreen:
+            name: "first_log_screen"
+            id: first_log_screen
+        LoginScreen:
+            name: "login_screen"
+            id: login_screen
+        PictureScreen:
+            name: "picture_screen"
+            id: picture_screen
+        SaveScreen:
+            name: "save_screen"
+            id: save_screen
+        ShopNameScreen:
+            name: "shop_name_screen"
+            id: shop_name_screen
+        AlbumScreen:
+            name: "album_screen"
+            id: album_screen
+        InfoScreen:
+            name: "info_screen"
+            id: info_screen

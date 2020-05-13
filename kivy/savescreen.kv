@@ -1,0 +1,80 @@
+<SaveScreen>
+    FloatLayout:
+        GridLayout:
+            rows: 1
+            pos_hint: {"top": 1, "left": 1}
+            size_hint: 1, .1
+            canvas:
+                Color:
+                    rgb: utils.get_color_from_hex("#2f2f39")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+            MDLabel:
+                text: "  StoreIN"
+                halign: "left"
+                font_style: "H6"
+                color: utils.get_color_from_hex("#ffffff")
+    FloatLayout:
+        MDTextField:
+            id: item_name
+            hint_text: "Insert item name"
+            helper_text_mode: "on_error"
+            helper_text: "Enter item name"
+            pos_hint: {"center_x": .5, "center_y": .7}
+            size_hint: None, None
+            
+        MDRaisedButton:
+            text: "Pick purchase date"
+            pos_hint: {"center_x": .5, "center_y": .6}
+            opposite_colors: True
+            on_release: app.show_date_picker()
+        MDLabel:
+            id: date_picker_label
+            text: "If none will be picked, todays date will be set."
+            pos_hint: {"center_x": .5, "center_y": .53}
+            theme_text_color: "Primary"
+            halign: "center"
+        MDLabel:
+            text: "How many years is receipt valid?"
+            pos_hint: {"center_x": .5, "center_y": .45}
+            halign: "center"
+        MDSlider:
+            pos_hint: {"center_x": .5, "center_y": .4}
+            id: year_slider
+            hint: True
+            min: 0
+            max: 10
+            value: 2
+        MDLabel:
+            pos_hint: {"center_x": .5, "center_y": .36}
+            text: "Product validity in years: {}".format(round(year_slider.value))
+            theme_text_color: "Primary"
+            halign: "center"
+        FloatLayout:
+            GridLayout:
+                cols: 1
+                pos_hint: {"top": 0.1, "left": 1}
+                size_hint: 1, .1
+                canvas:
+                    Color:
+                        rgb: utils.get_color_from_hex("#2f2f39")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+        MDIconButton:
+            icon: "arrow-left-bold-circle"
+            opposite_colors: True
+            pos_hint: {"center_x": .2, "center_y": .05}
+            user_font_size: "36sp"
+            on_press: 
+                root.manager.transition.direction = 'left'
+                root.manager.current = 'picture_screen'
+        MDIconButton:
+            icon: "arrow-right-bold-circle"
+            opposite_colors: True
+            pos_hint: {"center_x": .8, "center_y": .05}
+            user_font_size: "36sp"
+            on_press: 
+                root.manager.transition.direction = 'right'
+                root.manager.current = 'shop_name_screen'

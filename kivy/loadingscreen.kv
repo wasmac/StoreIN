@@ -1,0 +1,10 @@
+<LoadingScreen>
+    on_enter: app.google_connect()
+    FloatLayout:
+        canvas:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        MDProgressBar:
+            id: progress_bar
+            value: 0
