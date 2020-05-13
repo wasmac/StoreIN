@@ -24,7 +24,7 @@ which sotres files related to user interface.
 StoreIN asks user to provide the necessary permissions which allows the app to modify or create albums in users Google Photos service. (App can only modify files which was added/created by the app itself.)
 
 <p align="center">
- <img width="300" height="460" src="https://github.com/wasmac/StoreIN/blob/master/images/1.PNG">
+ <img width="400" height="460" src="https://github.com/wasmac/StoreIN/blob/master/images/1.PNG">
 </p>
 
 Application then goes to its default state, **homescreen** which is basicly an camera display.
