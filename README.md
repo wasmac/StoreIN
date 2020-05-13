@@ -26,11 +26,11 @@ StoreIN asks the user to provide the necessary permissions which allows the app 
 <div align=”center”> 
 ![Permission check](https://github.com/wasmac/StoreIN/blob/master/images/1.PNG) 
 </div>
-![Camera display](https://github.com/wasmac/StoreIN/blob/master/images/2.PNG)
+
 Application then goes to its default state, homescreen which is basicly an camera display.
-<div align=”center”>
+<p align="center">
  <img width="460" height="300" src="https://github.com/wasmac/StoreIN/blob/master/images/2.PNG">
-</div>
+</p>
 User then have various options like:
 
  - adding a new receipt
